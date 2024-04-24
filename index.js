@@ -17,3 +17,31 @@ const MarkdownEditor = () => {
 };
 
 export default MarkdownEditor;
+
+const sentence = 'hello world';
+const reversedSentence = sentence.split(' ').reverse().join(' ');
+const capitalizedSentence = reversedSentence.charAt(0).toUpperCase() + reversedSentence.slice(1);
+console.log(capitalizedSentence);
+
+const data = [
+    { name: 'John' },
+    { name: 'Jane' },
+    { name: 'Alice' },
+    { name: 'Bob' },
+];
+
+const names = data.map(item => item.name);
+console.log(names);
+
+const nestedData = [
+    [
+        { name: 'John' },
+        { name: 'Jane' },
+    ],
+    [
+        { name: 'Bob' },
+    ]
+];
+
+const names = nestedData.flatMap(array => array.map(item => item.name));
+console.log(names);
